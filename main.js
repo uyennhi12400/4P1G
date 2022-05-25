@@ -19,3 +19,32 @@ var b = document.getElementById("contain-form")
 function showform(){
     b.style.display = "block"
 }
+
+const loginForm = document.getElementById("contain-form")
+const loginBox = document.getElementById("showform")
+
+function openLoginForm() {
+    loginForm.style.visibility = "visible";
+    loginBox.style.opacity = "1";
+    loginBox.style.transform = "translateY(0px)";
+    loginform1();
+}
+
+function openSignupForm() {
+    loginForm.style.visibility = "visible";
+    loginBox.style.opacity = "1";
+    loginBox.style.transform = "translateY(0px)";
+    register();
+}
+
+function closeLoginForm() {
+    loginForm.style.visibility = "hidden";
+    loginBox.style.opacity = "0";
+    loginBox.style.transform = "translateY(-500px)";
+}
+
+window.onclick = function(event) {
+    if (event.target == loginForm) {
+        closeLoginForm();
+    }
+}

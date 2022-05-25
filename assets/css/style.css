@@ -75,21 +75,28 @@
 }
 
 
-.form-container{
-    height:100%;
+#contain-form{
+    z-index: 2;
+    height:100vh;
     width:100%;
-    position: absolute; 
-    /* display: none;  */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    background-color: rgba(202, 199, 199, 0.4);
 }
 
 
-.form-box{
+#showform{
     width: 380px;
     height: 480px;
     position: relative;
-    margin: 6% auto;
     background: rgb(236, 180, 153);
     overflow: hidden; 
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .buttion-box{
@@ -118,6 +125,7 @@
     height: 100%;
     background: linear-gradient(to right, #d6aa89, #d6632a);
     border-radius: 30px; 
+    transition: 0.4s;
 }
 
 .social-icons{
