@@ -11,8 +11,9 @@
     background-color: rgb(236, 180, 153);
     z-index: 1;
     display: flex;  
-    justify-content: space-evenly;
+    justify-content: space-between;
     position:fixed;
+    padding: 0 10vw;
 }
 
 #logo .group-name {
@@ -42,7 +43,7 @@
 
 .search-box-container .search-box {
     border: none; 
-    width: 226px; 
+    width: 250px; 
     height: 30px; 
     margin-left: 10px;
     margin-top: 5px;
@@ -54,6 +55,23 @@
     height: 30px; 
     border: none; 
     cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.search-box {
+    outline: none;
+    padding-left: 10px;
 }
 
 #login{
@@ -74,9 +92,22 @@
     padding-left: 5px;
 }
 
+.fa-xmark{
+    float:right;
+    margin: 15px 15px 0 0;
+    font-size: 25px;
+    color:#551f04; 
+    cursor: pointer;
+}
+
+.fa-xmark:hover {
+    transform: scale(1.5);
+    transition: 0.5s; 
+}
+
 
 #contain-form{
-    z-index: 2;
+    z-index: 3;
     height:100vh;
     width:100%;
     position: relative;
@@ -172,7 +203,7 @@
     padding-left: 8px; 
 }
 
-.checkbox-text {
+.checkbox-text a{
     color:#551f04;
 }
 

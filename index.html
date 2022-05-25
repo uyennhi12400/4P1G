@@ -9,6 +9,14 @@
     <script src="https://kit.fontawesome.com/ecd596d40f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="search-bar">
+        <form class = "search-box-container">
+            <input placeholder="Tìm truyện" class="search-box">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+    </div>
+
     <div id="main">
         <!-- Header Start -->
         <div id="header">
@@ -19,20 +27,16 @@
                 </a>
             
             </div>
-
-            <form class = "search-box-container">
-                <input placeholder="Tìm truyện" class="search-box">
-                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-
             <div id="login">
                 <button class="login-btn" onclick="openLoginForm()"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</button>
                 <button class="signin-btn" onclick="openSignupForm()"><i class="fa-solid fa-key"></i>Đăng kí</button>
             </div>
         </div>
 
+
         <div class="form-container" id="contain-form">
             <div class="form-box" id = "showform">
+                <i class="fa-solid fa-xmark" onclick="closeLoginForm()"></i>
                 <div class="buttion-box">
                     <div id="btn"></div>
                     <button class = "lgn-btn" onclick="loginform1()">Đăng Nhập</button>
@@ -49,13 +53,13 @@
                     <input type="checkbox" class="check-box"><span class = "checkbox-text">Nhớ tài khoản của tôi</span><br>
                     <button class ="submit-btn">Đăng nhập</button>
                     <span><a href="#" class="forget-pass">Quên mật khẩu</a></span>
-                    <span class="pass-forget">Chưa có tài khoản? <a href="#">Đăng kí</a></span>
+                    <span class="pass-forget">Chưa có tài khoản? <a href="#" onclick="openSignupForm()">Đăng kí</a></span>
                 </form>
                 <form class="input-form" id="register">
                     <input type ="email" class ="input-id" placeholder = "Nhập Email" required>
                     <input type ="password" class ="input-id" placeholder = "Nhập mật khẩu" required>
                     <input type ="password" class ="input-id" placeholder = "Xác nhận mật khẩu" required>
-                    <input type="checkbox" class="check-box"><span class = "checkbox-text">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a> </span>
+                    <input type="checkbox" class="check-box" required><span class = "checkbox-text">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a> </span>
                     <button class ="submit-btn">Đăng kí</button>
                 </form>
             </div>
